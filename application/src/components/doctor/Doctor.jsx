@@ -21,8 +21,6 @@ const Doctor = () => {
                 setDoctors(Array.isArray(response.data) ? response.data : [])
             } catch (error) {
                 console.error('Failed to load doctors', error)
-            } finally {
-                setLoading(false)
             }
         }
 
@@ -43,8 +41,6 @@ const Doctor = () => {
                 setNewDoctorName('')
             } catch (error) {
                 console.error('Failed to add doctor', error)
-            } finally {
-                setSaving(false)
             }
         }
 
@@ -83,8 +79,6 @@ const Doctor = () => {
                 onCancelEdit()
             } catch (error) {
                 console.error('Failed to update doctor', error)
-            } finally {
-                setSaving(false)
             }
         }
 
@@ -105,8 +99,6 @@ const Doctor = () => {
                 if (editingId === id) onCancelEdit()
             } catch (error) {
                 console.error('Failed to delete doctor', error)
-            } finally {
-                setSaving(false)
             }
         }
 
